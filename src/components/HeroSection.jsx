@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   return (
     <section className="hero-wrapper">
-      {/* Content + Animation Row */}
+      
       <div className="hero-container">
         <div className="hero-content">
           {loading ? (
