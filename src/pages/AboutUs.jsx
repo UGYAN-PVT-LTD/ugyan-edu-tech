@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-import "../css/AboutUs.css";
+import React, { useEffect, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import '../css/AboutUs.css';
 
 const AboutUs = () => {
   const [loading, setLoading] = useState(true);
@@ -16,13 +16,17 @@ const AboutUs = () => {
       {/* Intro Section */}
       <div className="intro-section">
         <h1 className="main-heading">
-          {loading ? <Skeleton width={320} /> : "Online Education Tailored to You"}
+          {loading ? (
+            <Skeleton width={320} />
+          ) : (
+            'Online Education Tailored to You'
+          )}
         </h1>
         <p className="description">
           {loading ? (
             <Skeleton count={2} width={700} />
           ) : (
-            "Unlock your true potential and discover a world of opportunities that align with your skills, interests, and aspirations"
+            'Unlock your true potential and discover a world of opportunities that align with your skills, interests, and aspirations'
           )}
         </p>
       </div>
@@ -33,16 +37,22 @@ const AboutUs = () => {
           <div className="card" key={idx}>
             <div className="card-header">
               <h2 className="card-title">
-                {loading ? <Skeleton width={100} /> : idx === 0 ? "Vision" : "Mission"}
+                {loading ? (
+                  <Skeleton width={100} />
+                ) : idx === 0 ? (
+                  'Vision'
+                ) : (
+                  'Mission'
+                )}
               </h2>
             </div>
             <p className="card-description">
               {loading ? (
                 <Skeleton count={4} />
               ) : idx === 0 ? (
-                "At UGYAN Learning, our vision is to become a global leader in digital education by making quality learning accessible, inclusive, and personalized for everyone. We envision a future where technology bridges the gap between curiosity and opportunity, empowering individuals to grow, innovate, and lead in a rapidly evolving world."
+                'At UGYAN Learning, our vision is to become a global leader in digital education by making quality learning accessible, inclusive, and personalized for everyone. We envision a future where technology bridges the gap between curiosity and opportunity, empowering individuals to grow, innovate, and lead in a rapidly evolving world.'
               ) : (
-                "Our mission is to provide learner-centric, technology-driven education that empowers individuals with the skills and knowledge needed to thrive in the 21st century. Through expert mentorship, interactive content, and real-world applications, we aim to cultivate a community of lifelong learners who are confident, capable, and future-ready."
+                'Our mission is to provide learner-centric, technology-driven education that empowers individuals with the skills and knowledge needed to thrive in the 21st century. Through expert mentorship, interactive content, and real-world applications, we aim to cultivate a community of lifelong learners who are confident, capable, and future-ready.'
               )}
             </p>
           </div>
@@ -52,12 +62,12 @@ const AboutUs = () => {
       {/* Ugyan Description Section */}
       <div className="ugyan-description reverse-layout">
         <div className="info-box card-animate">
-          <h2>{loading ? <Skeleton width={200} /> : "Welcome to Ugyan"}</h2>
+          <h2>{loading ? <Skeleton width={200} /> : 'Welcome to Ugyan'}</h2>
           <p>
             {loading ? (
               <Skeleton count={3} />
             ) : (
-              "UGyan is built on the foundation that knowledge is the key to boundless possibilities. We believe learning should not be confined to classrooms or rigid schedules. Instead, it should be a dynamic, empowering experience accessible to all."
+              'UGyan is built on the foundation that knowledge is the key to boundless possibilities. We believe learning should not be confined to classrooms or rigid schedules. Instead, it should be a dynamic, empowering experience accessible to all.'
             )}
           </p>
           <p>
@@ -81,7 +91,11 @@ const AboutUs = () => {
             )}
           </div>
           {loading ? (
-            <Skeleton width={160} height={44} style={{ marginTop: "20px", borderRadius: "30px" }} />
+            <Skeleton
+              width={160}
+              height={44}
+              style={{ marginTop: '20px', borderRadius: '30px' }}
+            />
           ) : (
             <button className="enroll-btn">ENROLL TODAY →</button>
           )}
@@ -109,7 +123,11 @@ const AboutUs = () => {
             {index % 2 === 0 ? (
               <>
                 {/* Image Left */}
-                <div className={`image-box ${index % 2 === 0 ? "green-bg" : "peach-bg"}`}>
+                <div
+                  className={`image-box ${
+                    index % 2 === 0 ? 'green-bg' : 'peach-bg'
+                  }`}
+                >
                   {loading ? (
                     <Skeleton width="100%" height="100%" />
                   ) : (
@@ -122,31 +140,69 @@ const AboutUs = () => {
                   {loading ? (
                     <Skeleton count={3} />
                   ) : (
-                 <p>
-  <strong>Dr. Michael Lee</strong>
-  <br />
-  A tech mentor and AI expert, Dr. Lee focuses on building intelligent learning platforms and guiding institutions through digital education transformation.
-</p>
+                    <p>
+                      <span
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                        }}
+                      >
+                        <strong>Leela Krishna Vaka</strong>
+                        <strong
+                          style={{ fontSize: '10px', marginTop: '-0.25rem' }}
+                        >
+                          Co - founder & Managing director
+                        </strong>
+                      </span>
+                      <br />
+                      Education has the power to transform lives. At Ugyan,
+                      we're committed to making learning accessible and engaging
+                      for all students. Join us in this journey to redefine
+                      education."
+                    </p>
                   )}
                 </div>
               </>
             ) : (
               <>
                 {/* Text Left */}
-                <div className="text-box shadow-box">
+                <div
+                  className="text-box shadow-box"
+                  style={{ padding: '1.5rem' }}
+                >
                   {loading ? (
                     <Skeleton count={3} />
                   ) : (
                     <p>
-  <strong>Dr. Michael Lee</strong>
-  <br />
-  A tech mentor and AI expert, Dr. Lee focuses on building intelligent learning platforms and guiding institutions through digital education transformation.
-</p>
+                      <span
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                        }}
+                      >
+                        <strong>Aswini Thakkellapati</strong>
+                        <strong
+                          style={{ fontSize: '10px', marginTop: '-0.25rem' }}
+                        >
+                          Co-founder & CEO
+                        </strong>
+                      </span>
+                      <br />I believe that education is the cornerstone of a
+                      brighter future. At Ugyan, we are driven by the mission to
+                      innovate and enhance learning through cutting-edge
+                      technology. Our team is dedicated to creating solutions
+                      that inspire curiosity, foster creativity, and empower
+                      individuals to reach their full potential.
+                    </p>
                   )}
                 </div>
 
                 {/* Image Right */}
-                <div className={`image-box ${index % 2 === 0 ? "green-bg" : "peach-bg"}`}>
+                <div
+                  className={`image-box ${
+                    index % 2 === 0 ? 'green-bg' : 'peach-bg'
+                  }`}
+                >
                   {loading ? (
                     <Skeleton width="100%" height="100%" />
                   ) : (
