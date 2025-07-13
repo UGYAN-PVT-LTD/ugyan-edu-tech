@@ -2,10 +2,10 @@ import React from "react";
 import "./StatsCards.css";
 
 const stats = [
-  { number: "50,000+", label: "Students Enrolled" },
-  { number: "10,000+", label: "Students Placed" },
-  { number: "2,000+", label: "Internships Provided" },
-  { number: "15+", label: "Countries" },
+  { number: "500+", label: "Students Enrolled" },
+  { number: "100+", label: "Students Placed" },
+  { number: "500+", label: "Internships Provided" },
+  { number: "3+", label: "Countries" },
 ];
 
 const StatsCards = () => {

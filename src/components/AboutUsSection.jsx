@@ -36,9 +36,13 @@ const AboutUsSection = () => {
               </div>
             ) : (
               <p>
-                <strong>Dr. Emily Chen</strong><br />
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In excepturi quae blanditiis doloribus est, temporibus possimus unde nisi voluptatibus. Iusto voluptas ad aspernatur aperiam et eos unde asperiores quasi! Quaerat.
-              </p>
+                <strong style={{ fontSize: '16px' }}>Leela Krishna Vaka</strong><br />
+                <strong style={{ fontSize: '10px' }}>Co - founder & Managing director</strong><br />
+                <br />
+               
+
+
+Education has the power to transform lives. At Ugyan, we're committed to making learning accessible and engaging for all students. Join us in this journey to redefine education."</p>
             )}
           </div>
         </div>
@@ -53,11 +57,15 @@ const AboutUsSection = () => {
                   <Skeleton count={4} />
                 </div>
               ) : (
-                <p>
-                  <strong>Dr. Emily Chen</strong><br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, tempore amet ipsa dolores quis, adipisci error esse ipsum delectus aut temporibus natus exercitationem eveniet quae. Natus laborum porro possimus nam!
-                </p>
-              )}
+              <p>
+                <strong style={{ fontSize: '16px' }}>Aswini Thakkellapati</strong><br />
+                <strong style={{ fontSize: '10px' }}>Co-founder & CEO
+</strong><br />
+                <br />
+               
+
+
+I believe that education is the cornerstone of a brighter future. At Ugyan, we are driven by the mission to innovate and enhance learning through cutting-edge technology. Our team is dedicated to creating solutions that inspire curiosity, foster creativity, and empower individuals to reach their full potential.</p> )}
             </div>
           </div>
           <div className="image-box peach-bg">
