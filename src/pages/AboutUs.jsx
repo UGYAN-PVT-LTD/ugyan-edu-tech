@@ -3,11 +3,11 @@ import "../css/AboutUs.css";
 import { FaLightbulb, FaCompass } from "react-icons/fa";
 import Carousel from "../components/Carousel";
 import CircularGallery from "../components/CircularGallery.jsx";
-import WhyChooseUs from "./WhyChooseUs.jsx";
+import WhyChooseUs from "./WhyChooseUs.jsx";  
+import AboutUsSection from "../components/AboutUsSection.jsx";
 
 const AboutUs = () => {
   return (
-    <>
       <div className="about-us-container">
         {/* Split Screen Section */}
         <div className="pt-30 w-full flex justify-center items-center text-4xl font-bold">
@@ -82,18 +82,20 @@ const AboutUs = () => {
             highlight our commitment to transforming education.
           </p>
 
-          <div style={{ height: "600px", position: "relative" }}>
-            <CircularGallery
-              bend={3}
-              textColor="#ffffff"
-              borderRadius={0.05}
-              scrollEase={0.02}
-            />
-          </div>
-        </section>
-        <WhyChooseUs />
+        <div style={{ height: "600px", position: "relative" }}>
+          <CircularGallery
+            bend={3}
+            textColor="#ffffff"
+            borderRadius={0.05}
+            scrollEase={0.02}
+          />
+        </div>
+      </section>
+      <WhyChooseUs/>
+      <div className="class">
+      <AboutUsSection/>
       </div>
-    </>
+    </div>
   );
 };
 

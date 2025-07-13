@@ -16,10 +16,7 @@
   align-items: center;
   text-align: left;
   gap: 20px;
-  /* background: 
-    radial-gradient(circle at top left, rgba(138, 43, 226, 0.4), transparent 50%),
-    radial-gradient(circle at top right, rgba(138, 43, 226, 0.4), transparent 50%),
-    linear-gradient(to right, #f5e1ff, #ece1f7); */
+background: linear-gradient(to right, #f5e1ff, #ece1f7);
   color: white;
   padding: 20px 40px;
   min-height: 65vh;
@@ -241,4 +238,6 @@
     font-size: 2rem;
   }
 }
-
+.class{
+  background: linear-gradient(to right, #f5e1ff, #ece1f7);
+}
