@@ -6,12 +6,7 @@
   flex-direction: column;
   gap: 50px;
 }
-.heading-block{
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #53346D;
-}
+
 .top-row,
 .bottom-row {
   display: flex;
@@ -29,18 +24,25 @@
   display: flex;
   align-items: center;
   width: max-content;
-  animation: scroll 10s linear infinite;
-  gap: 40px; /* spacing between logos */
+  gap: 40px;
+}
+
+.carousel.scroll-right .carousel-track {
+  animation: scroll 20s linear infinite;
 }
 
 .carousel.scroll-left .carousel-track {
-  animation: scroll-reverse 10s linear infinite;
+  animation: scroll-reverse 20s linear infinite;
+}
+
+.carousel-logo-wrapper {
+  flex-shrink: 0;
 }
 
 .carousel-logo {
-  max-height: 80px;    /* equal height */
-  width: auto;         /* allow variable width */
-  object-fit: contain; /* prevent cropping */
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -55,6 +57,7 @@
 .heading-block h2 {
   font-size: 24px;
   margin: 0;
+  color: #53346D;
 }
 
 .arrow-icon {
@@ -62,7 +65,7 @@
   color: #333;
 }
 
-/* Animations */
+/* Keyframes for Infinite Scroll */
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -81,7 +84,7 @@
   }
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 1024px) {
   .trusted-by-section {
     padding: 40px 20px;

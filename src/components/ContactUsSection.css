@@ -1,35 +1,28 @@
-/* Reset + box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Section wrapper */
 .contact-us-wrapper {
   width: 100vw;
   padding: 60px 20px;
   background: linear-gradient(to right, #f9f6fc, #ece1f7);
-  text-align: center;
-
+  display: flex;
+  justify-content: center;
 }
 
-/* Inner container */
-.contact-us-inner {
-  max-width: 800px;
-  margin: 0 auto;
+.contact-us-grid {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Headings */
+.contact-left {
+  flex: 1;
+  min-width: 320px;
+}
+
 .contact-heading {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
   color: #53346D;
@@ -41,17 +34,15 @@ body {
   margin-bottom: 30px;
 }
 
-/* Form box */
 .contact-us-form {
   background: white;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-  display: inline-block;
-  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Heading inside form */
 .contact-us-form-heading {
   font-size: 20px;
   margin-bottom: 25px;
@@ -59,14 +50,12 @@ body {
   font-weight: 600;
 }
 
-/* Form layout */
 .contact-form-elements {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Inputs */
 .contact-form-elements input {
   padding: 12px 16px;
   font-size: 15px;
@@ -81,7 +70,6 @@ body {
   outline: none;
 }
 
-/* Button */
 .send-button {
   background: linear-gradient(to right, #6a1b9a, #874faa, #4a148c);
   color: white;
@@ -90,10 +78,10 @@ body {
   border-radius: 30px;
   font-size: 15px;
   font-weight: bold;
-  transition: background-position 0.4s ease, transform 0.2s ease;
   background-size: 200% auto;
   cursor: not-allowed;
   opacity: 0.6;
+  transition: transform 0.3s ease;
 }
 
 .send-button:hover {
@@ -101,37 +89,34 @@ body {
   transform: scale(1.03);
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .contact-heading {
-    font-size: 28px;
-  }
-
-  .contact-subheading {
-    font-size: 14px;
-  }
-
-  .contact-us-form {
-    padding: 20px;
-  }
-
-  .contact-form-elements input {
-    font-size: 14px;
-  }
-}
-.contact-us-form {
+.contact-right {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-  max-width: 700px;
-  margin: 0 auto;
+  align-items: center;
+  min-width: 300px;
+  padding: 10px;
+}
+
+.lottie-animation {
   width: 100%;
-  height: auto !important;     
-  min-height: 0 !important;    
-  overflow: hidden;           
+  max-width: 600px;
+  height: 500px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-us-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-heading {
+    font-size: 20px;
+  }
+
+  .lottie-animation {
+    max-width: 300px;
+  }
 }
