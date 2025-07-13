@@ -3,6 +3,7 @@ import "../css/AboutUs.css";
 import { FaLightbulb, FaCompass } from "react-icons/fa";
 import Carousel from "../components/Carousel";
 import CircularGallery from "../components/CircularGallery.jsx";
+import WhyChooseUs from "./WhyChooseUs.jsx";  
 
 const AboutUs = () => {
   return (
@@ -87,6 +88,7 @@ const AboutUs = () => {
           />
         </div>
       </section>
+      <WhyChooseUs/>
     </div>
   );
 };

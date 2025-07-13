@@ -73,7 +73,7 @@ export const termsContent = (
     <p>Subject to Indian laws and courts of Bangalore, Karnataka.</p>
 
     <h3>12. Contact Us</h3>
-    <p>Email: info@ugyanedutech.com<br/>Phone: +91-XXXXXXXXXX<br/>Address: [Full Address, Bangalore, India]</p>
+    <p>Email: info@ugyanedutech.com<br/>Phone: +91-79751 65470<br/>Address: [Whitefield Main Rd, opposite Varthur kodi, Varthur Kodi, Palm Meadows, Busstop, Whitefield, Bengaluru, Karnataka 560066]</p>
   </>
 );
 
