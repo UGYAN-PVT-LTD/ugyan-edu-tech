@@ -11,7 +11,7 @@ const CoursesSection = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data loading delay
+   
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);

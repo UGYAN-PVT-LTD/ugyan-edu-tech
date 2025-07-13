@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate,useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 // Pages
@@ -8,7 +8,6 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import ViewMore from "./components/ViewMore";
-import LoginSignupPage from "./pages/Login-SignupPage";
 import EnrollPage from "./pages/EnrollPage";
 import ProfilePage from "./pages/ProfilePage";
 
@@ -34,6 +33,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [loadingUser,setLoadingUser]=useState(true);
   const [courses, setCourses] = useState([]);
+  const location=useLocation();
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     console.log(storedUser);
@@ -44,48 +44,49 @@ function App() {
   },[]);
   if(loadingUser) return <div className="p-10 text-center">Loading....</div>
   const isAdmin = user?.role === "Admin";
-
+  
+  const isAuthentication=location.pathname===`/login`||location.pathname===`/signup`;
+  console.log(isAuthentication)
   return (
     <>
       <ScrollToTop />
+      {
+        !isAdmin?(
+          <>
+            {!isAuthentication&&(<Navbar user={user} setUser={setUser}/>)}
+            <Routes>
+              <Route path="/" element={<HomePage />}/>
+              <Route path="/courses" element={<Courses />}/>
+              <Route path="/about-us" element={<AboutUs />}/>
+              <Route path="/why-choose-us" element={<WhyChooseUs/>}/>
+              <Route path="/contact-us" element={<ContactUs/>}/>
+              <Route path="/viewmore/:title" element={<ViewMore user={user}/>}/>
+              <Route path="/enroll/:title" element={<EnrollPage user={user} />}/>
+              <Route path="/profile" element={<ProfilePage user={user} setUser={setUser} />}/>
+              <Route path="/login" element={<LoginPage user={user} setUser={setUser} />}/>
+              <Route path="/signup" element={<SignupPage />} />
+              
+            </Routes>
+            {!isAuthentication&&<Footer/>}
+          </>
+        ):
+        (
+          <Routes>
+            <Route path="/admin/*"
+              element={
+                <ProtectedRoute user={user} allowedRoles={["Admin"]}>
+                  <AdminLandingPage user={user}/>
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/login" element={<LoginPage user={user} setUser={setUser} />}/>
+            <Route path="/signup" element={<SignupPage />} />
+          </Routes>
+        )
+      }
+        
 
-      {!isAdmin && <Navbar user={user} setUser={setUser} />}
-
-      <Routes>
-        {/* 🔐 User Routes */}
-        <Route
-          path="/"
-          element={
-            <HomePage />
-          }
-        />
-        <Route path="/courses" element={<Courses />}/>
-        <Route path="/about-us" element={<AboutUs />}/>
-        <Route path="/why-choose-us" element={<WhyChooseUs/>}/>
-        <Route path="/contact-us" element={<ContactUs/>}/>
-        <Route path="/viewmore/:title" element={<ViewMore user={user}/>}/>
-        <Route path="/enroll/:title" element={<EnrollPage user={user} />}/>
-        <Route path="/profile" element={<ProfilePage user={user} setUser={setUser} />}/>
-
-        {/* 🔐 Admin Routes */}
-        <Route
-          path="/admin/*"
-          element={
-            <ProtectedRoute user={user} allowedRoles={["Admin"]}>
-              <AdminLandingPage user={user} courses={courses}/>
-            </ProtectedRoute>
-          }
-        />
-        {/* 🔓 Public Routes */}
-        <Route
-          path="/login"
-          element={<LoginPage user={user} setUser={setUser} />}
-        />
-        <Route path="/signup" element={<SignupPage />} />
-        {/* <Route path="/loginorSignup" element={<LoginSignupPage />} /> */}
-
-        {/* 🔁 Wildcard fallback */}
-        <Route
+        {/* <Route
           path="*"
           element={
             user ? (
@@ -94,10 +95,7 @@ function App() {
               <Navigate to="/login" />
             )
           }
-        />
-      </Routes>
-
-      {!isAdmin && <Footer />}
+        /> */}
     </>
   );
 }

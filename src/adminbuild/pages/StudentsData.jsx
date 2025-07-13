@@ -50,7 +50,7 @@ const StudentsData = () => {
         Export to Excel
       </button>
       <div className="w-full overflow-auto">
-        <table className="min-w-[800px] w-full border mt-5 text-sm md:text-base">
+        <table className="min-w-[800px] w-full mt-5 text-sm md:text-base">
           <thead className="bg-indigo-800 text-white whitespace-nowrap">
             <tr className="font-semibold text-left">
               <th className="px-4 py-3">S.No</th>

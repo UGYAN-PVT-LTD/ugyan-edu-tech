@@ -35,7 +35,6 @@ const DisplayCourse=()=>{
         </div>
         );
     }
-    console.log(courses);
     return(
         <>
             <div className="flex w-full justify-center items-center p-10">

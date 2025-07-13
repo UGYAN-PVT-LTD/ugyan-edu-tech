@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         
-        {/* Quick Links */}
+
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
@@ -21,7 +21,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Company Info + Social Media */}
         <div className="footer-section company-info">
           <h2 className="footer-logo">Ugyan Edutech</h2>
           <p>Empowering Learning, Empowering Lives</p>

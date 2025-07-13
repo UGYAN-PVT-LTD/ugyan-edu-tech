@@ -10,7 +10,7 @@ import "./HeroSection.css";
 
 const HeroSection = () => {
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // ✅ hook for navigation
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
@@ -19,7 +19,7 @@ const HeroSection = () => {
 
   return (
     <section className="hero-wrapper">
-      
+      {/* Content + Animation Row */}
       <div className="hero-container">
         <div className="hero-content">
           {loading ? (
@@ -108,8 +108,6 @@ const HeroSection = () => {
           </div>
         )}
       </div>
-
-      {/* Stats Cards BELOW */}
       {!loading && (
         <div className="stats-wrapper">
           <StatsCards />

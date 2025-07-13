@@ -34,7 +34,7 @@ const LoginPage = ({user,setUser}) => {
                     navigate(from.pathname, { state: from.state });
                 } else {
                     if(data.user?.role==='Admin'){
-                        navigate('/admin');
+                        navigate('/admin/home');
                     }
                     else{
                         navigate('/');
