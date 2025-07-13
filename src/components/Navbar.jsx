@@ -82,7 +82,7 @@ const Navbar = ({ user, setUser }) => {
                 className="login-btn mt-4 md:mt-0 nav-item"
                 style={{ "--i": 6 }}
                 onClick={() => {
-                  nav("/loginorSignup");
+                  nav("/login");
                   setMenuOpen(false);
                 }}
               >
@@ -108,7 +108,7 @@ const Navbar = ({ user, setUser }) => {
             <button
               className="login-btn mt-4 md:mt-0 nav-item"
               onClick={() => {
-                nav("/loginorSignup");
+                nav("/login");
                 setMenuOpen(false);
               }}
             >
