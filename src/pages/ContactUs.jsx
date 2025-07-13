@@ -71,7 +71,7 @@ const ContactUs = () => {
           <Skeleton height={300} />
         ) : (
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.1318887809143!2d77.60518141474976!3d13.028569990825529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae178a57fae2b3%3A0xa7a3c64c0a2c427f!2sUgyan%20Private%20Limited!5e0!3m2!1sen!2sin!4v1629630923722!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.213293803623!2d77.7445481!3d12.9581991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x659d12bf5498f4e7%3A0x8ef08c377c391150!2sUGYAN%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1752427837492!5m2!1sen!2sin"
             allowFullScreen=""
             loading="lazy"
             title="Ugyan Location"

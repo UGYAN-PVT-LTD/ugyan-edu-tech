@@ -40,6 +40,7 @@
   color: #f5f5f5;
   line-height: 1.6;
   text-decoration: none;
+  text-align: left;
 }
 
 .footer-section ul {
@@ -51,7 +52,9 @@
 .footer-section li {
   margin-bottom: 10px;
 }
-
+.footer-section p{
+  text-align : left;
+}
 .footer-section a:hover {
   color: #bb86fc;
   cursor: pointer;
