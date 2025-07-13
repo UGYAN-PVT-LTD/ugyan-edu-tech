@@ -1,0 +1,49 @@
+/* Container background and spacing */
+.policy-container {
+  background-color: #f9f9fc;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Card-style wrapper */
+.policy-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main title */
+.policy-title {
+  font-size: 2.2rem;
+  color: #4b2aad;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Content text */
+.policy-content {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Section headings */
+.policy-content h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.policy-content p {
+  margin-bottom: 1rem;
+}
