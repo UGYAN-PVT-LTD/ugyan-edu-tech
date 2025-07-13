@@ -14,7 +14,7 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-container">
-      <h1 className="contact-us-heading">
+      <h1 className="contact-us-heading font-bold">
         {loading ? <Skeleton width={220} /> : "Contact Us"}
       </h1>
       <p className="contact-us-subheading">
@@ -22,17 +22,20 @@ const ContactUs = () => {
       </p>
 
       <div className="contact-us-content">
-        <div className="contact-us-info">
-          <h2>{loading ? <Skeleton width={120} /> : "Reach Us"}</h2>
+        <div className="contact-us-info flex flex-col justify-center items-center">
+          <h2 className="text-xl font-semibold">{loading ? <Skeleton width={120} /> : "Reach Us"}</h2>
           {loading ? (
             <>
               <Skeleton count={3} />
             </>
           ) : (
             <>
-              <p>Email: info@ugyan.in</p>
-              <p>Phone: +91 9876543210</p>
-              <p>Address: Ugyan Pvt Ltd, Andhra Pradesh, India</p>
+              <div className="flex flex-col justify-start items-start px-20">
+                <p><strong>Email:</strong> support@ugyan.in</p>
+                <p><strong>Phone:</strong> +91 79751 65470</p>
+                <p><strong>Address:</strong> Sigma Tech Park,
+                 Whitefield Main Rd, Bengaluru, Karnataka, 560066</p>
+              </div>
             </>
           )}
           <div className="contact-us-social-links">
@@ -40,9 +43,9 @@ const ContactUs = () => {
               <Skeleton height={35} width={250} />
             ) : (
               <>
-                <a href="#" className="contact-us-social linkedin">LinkedIn</a>
-                <a href="#" className="contact-us-social twitter">Twitter</a>
-                <a href="#" className="contact-us-social instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/ugyan-pvt-ltd/" className="contact-us-social linkedin">LinkedIn</a>
+                <a href="https://www.facebook.com/profile.php?id=61558530543625" className="contact-us-social twitter">Facebook</a>
+                <a href="https://www.instagram.com/ugyan_edu?igsh=M2w0MGZ6dXM4MHRl" className="contact-us-social instagram">Instagram</a>
               </>
             )}
           </div>
@@ -71,7 +74,7 @@ const ContactUs = () => {
           <Skeleton height={300} />
         ) : (
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.1318887809143!2d77.60518141474976!3d13.028569990825529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae178a57fae2b3%3A0xa7a3c64c0a2c427f!2sUgyan%20Private%20Limited!5e0!3m2!1sen!2sin!4v1629630923722!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.213293803623!2d77.7445481!3d12.9581991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x659d12bf5498f4e7%3A0x8ef08c377c391150!2sUGYAN%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1752427837492!5m2!1sen!2sin"
             allowFullScreen=""
             loading="lazy"
             title="Ugyan Location"

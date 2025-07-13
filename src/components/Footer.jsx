@@ -35,7 +35,7 @@ const Footer = () => {
 
         <div className="footer-section company-info">
           <h2 className="footer-logo">Ugyan Edutech</h2>
-          <p>Empowering Learning, Empowering Lives</p>
+          <p>Unleash your potential, conquer the real world</p>
 
           <h3 className="follow">Follow Us</h3>
           <div className="social-icons">
@@ -59,17 +59,14 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>Email: support@ugyan.in</p>
           <p>Phone: +91 79751 65470</p>
-          <p>
-            Location: Seetharampalya,
-            <br></br>
-            Bangalore -India
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Seetharampalya+Bangalore"
+          <p>Location: Sigma Tech Park, Whitefield Main Rd,</p>  <p>Bengaluru, Karnataka 560066</p>
+            <p><a
+              href="https://maps.app.goo.gl/rRayKuHqgwM2tw127"
               target="_blank"
               rel="noopener noreferrer"
               className="location-link"
             >
-              <br />
+             
               Click to View on Map
             </a>
           </p>
