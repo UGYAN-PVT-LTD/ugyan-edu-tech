@@ -56,11 +56,11 @@ const ContactUs = () => {
             <Skeleton height={250} />
           ) : (
             <form>
-              <input type="text" placeholder="Your Name" disabled />
-              <input type="email" placeholder="Your Email" disabled />
-              <input type="text" placeholder="Subject" disabled />
-              <textarea rows="4" placeholder="Your Message" disabled />
-              <button type="submit" disabled>Send</button>
+              <input type="text" placeholder="Your Name" />
+              <input type="email" placeholder="Your Email" />
+              <input type="text" placeholder="Subject" />
+              <textarea rows="4" placeholder="Your Message" />
+              <button type="submit" >Send</button>
             </form>
           )}
         </div>

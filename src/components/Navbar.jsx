@@ -55,8 +55,8 @@ const Navbar = ({ user, setUser }) => {
           <NavLink to="/courses" className="nav-item hover:scale-105 hover:text-[#6b21a8]" style={{ "--i": 2 }} onClick={()=>setMenuOpen(false)}>
             Courses
           </NavLink>
-          <NavLink to="/why-choose-us" className="nav-item hover:scale-105 hover:text-[#6b21a8]" style={{ "--i": 3 }} onClick={()=>setMenuOpen(false)}>
-            Why Choose Us
+          <NavLink to="/workshops" className="nav-item hover:scale-105 hover:text-[#6b21a8]" style={{ "--i": 3 }} onClick={()=>setMenuOpen(false)}>
+            Workshops
           </NavLink>
           <NavLink to="/about-us" className="nav-item hover:scale-105 hover:text-[#6b21a8]" style={{ "--i": 4 }} onClick={()=>setMenuOpen(false)}>
             About Us
