@@ -35,3 +35,40 @@
   transform: translateY(-10px);
   box-shadow: 0 12px 28px rgba(106, 27, 154, 0.2);
 }
+.stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #f9f6fc, #ece1f7);
+  z-index: 1;
+  position: relative;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 20px 30px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.stat-card h2 {
+  font-size: 1.8rem;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(106, 27, 154, 0.2);
+}
