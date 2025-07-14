@@ -46,17 +46,20 @@ const ContactUsSection = () => {
           )}
         </div>
 
+        {/* Lottie section hidden on mobile */}
         <div className="contact-right">
-          {loading ? (
-            <Skeleton height={400} width={400} />
-          ) : (
-            <Lottie
-              animationData={animationData}
-              loop
-              autoplay
-              className="lottie-animation"
-            />
-          )}
+          <div className="hide-on-mobile">
+            {loading ? (
+              <Skeleton height={400} width={400} />
+            ) : (
+              <Lottie
+                animationData={animationData}
+                loop
+                autoplay
+                className="lottie-animation"
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
