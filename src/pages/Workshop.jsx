@@ -20,23 +20,32 @@ const WorkshopForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 flex justify-center items-center mt-20">
+    <div
+      className="min-h-screen py-10 px-4 flex justify-center items-center mt-20"
+      style={{ backgroundColor: "#f9f7fc" }}
+    >
       <div className="w-full max-w-6xl bg-white shadow-lg rounded-xl flex flex-col lg:flex-row overflow-hidden">
-        
         {/* Form Section */}
-        <div className="w-full lg:w-1/2 p-8 text-cemter">
-          <h2 className="text-3xl font-semibold text-blue-500 mb-1 text-center">Workshops</h2>
-          <p className="text-sm text-gray-500 mb-6 text-center">Only for College / University Administration</p>
+        <div className="w-full lg:w-1/2 p-8">
+          <h2 className="text-3xl font-semibold text-blue-500 mb-1 text-center">
+            Workshops
+          </h2>
+          <p className="text-sm text-gray-500 mb-6 text-center">
+            Only for College / University Administration
+          </p>
 
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">Contact Us to Conduct a Workshop</h3>
-          <p className="text-sm text-gray-500 mb-6">Fill out the form below to get started.</p>
+          <h3 className="text-xl font-semibold text-gray-700 mb-4">
+            Contact Us to Conduct a Workshop
+          </h3>
+          <p className="text-sm text-gray-500 mb-6">
+            Fill out the form below to get started.
+          </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="">
+            <div>
               <label className="flex items-center gap-2 my-2 text-sm font-medium text-gray-600">
                 <FaUser className="text-blue-500" /> Full Name
               </label>
@@ -82,12 +91,14 @@ const WorkshopForm = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium my-2 text-gray-600 mb-1">Domain for Workshop</label>
+              <label className="block text-sm font-medium my-2 text-gray-600 mb-1">
+                Domain for Workshop
+              </label>
               <select
                 name="domain"
                 value={formData.domain}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-md focus:border-transparent  bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full px-4 py-2 border rounded-md focus:border-transparent bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"
                 required
               >
                 <option value="">Select a domain</option>
@@ -107,8 +118,9 @@ const WorkshopForm = () => {
           </form>
         </div>
 
+        {/* Lottie Animation Section */}
         <div className="hidden lg:flex w-full lg:w-1/2 bg-blue-50 items-center justify-center p-8">
-          <WorkshopLottie/>
+          <WorkshopLottie />
         </div>
       </div>
     </div>
