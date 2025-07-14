@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -124,10 +124,9 @@ const UploadCourseForm = () => {
   };
 
   return (
-    <div className="w-full p-5">
+    <div className="w-full pl-[23%] bg-blue-50 p-5">
       <div
-        className="p-6 max-w-2xl mx-auto flex flex-col justify-center items-center border-gray-900 rounded-3xl shadow-lg shadow-black"
-        style={{ fontFamily: "Poppins" }}
+        className="p-6 max-w-2xl mx-auto flex flex-col bg-white justify-center items-center border-gray-900 rounded-3xl shadow-lg shadow-black"
       >
         <h2 className="text-2xl font-bold mb-4 text-sky-700">Upload a New Course</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
@@ -138,7 +137,7 @@ const UploadCourseForm = () => {
             value={formData.title}
             onChange={handleChange}
             required
-            className="p-4 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
+            className="p-2 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
           />
           <input
             name="subtitle"
@@ -147,7 +146,7 @@ const UploadCourseForm = () => {
             value={formData.subtitle}
             onChange={handleChange}
             required
-            className="p-4 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
+            className="p-2 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
           />
           <textarea
             name="description"
@@ -156,7 +155,7 @@ const UploadCourseForm = () => {
             onChange={handleChange}
             rows={7}
             required
-            className="p-4 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
+            className="p-2 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
           />          
           <label className="font-medium text-gray-700">Lessons:</label>
           <div className="flex flex-col gap-2">
@@ -211,7 +210,7 @@ const UploadCourseForm = () => {
             placeholder="Extras (comma separated)"
             onChange={(e) => handleArrayChange(e, "extras")}
             value={formData.extras.join(", ")}
-            className="p-4 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
+            className="p-2 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
           />
           <input
             name="duration"
@@ -219,7 +218,7 @@ const UploadCourseForm = () => {
             placeholder="Duration (e.g., 2 Months)"
             value={formData.duration}
             onChange={handleChange}
-            className="p-4 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
+            className="p-2 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
           />
           <input
             name="roles"
@@ -227,7 +226,7 @@ const UploadCourseForm = () => {
             placeholder="Career Roles (comma separated)"
             value={formData.careers.roles.join(", ")}
             onChange={handleCareersChange}
-            className="p-4 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
+            className="p-2 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
           />
           <input
             name="package"
@@ -235,7 +234,7 @@ const UploadCourseForm = () => {
             placeholder="Career Package"
             value={formData.careers.package}
             onChange={handleCareersChange}
-            className="p-4 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
+            className="p-2 border-2 border-gray-200 focus:border-gray-500 focus:outline-none rounded-2xl"
           />
 
           <div

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import CourseCard from "../components/CourseCard";
+import CourseCard from "../components/DisplayCourse/CourseCard";
 
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
@@ -21,11 +21,11 @@ const DisplayCourse=()=>{
                 console.log(err);
             })
     },[]);
-    if(error) return <div>Error</div>
+    if(error) return <div>{error}</div>
     if (loading) {
         return (
-        <div className="flex w-full justify-center items-center p-10">
-            <ul className="grid lg:grid-cols-3 gap-16 md:grid-cols-2 grid-cols-1">
+        <div className="flex w-full pl-[23%] justify-center bg-blue-50 items-center p-10">
+            <ul className="grid lg:grid-cols-2 gap-16 md:grid-cols-2 grid-cols-1">
             {Array(6).fill().map((_, index) => (
                 <li key={index}>
                 <CourseCard loading={true} />
@@ -37,8 +37,8 @@ const DisplayCourse=()=>{
     }
     return(
         <>
-            <div className="flex w-full justify-center items-center p-10">
-                <ul className="grid lg:grid-cols-3 gap-16 md:grid-cols-2 grid-cols-1">
+            <div className="flex w-full pl-[20%] justify-center bg-blue-50 items-center p-10">
+                <ul className="grid lg:grid-cols-2 gap-16 md:grid-cols-2 grid-cols-1">
                     {   
                         courses.map((course,index)=>(
                             <li key={index}>

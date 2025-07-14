@@ -10,11 +10,10 @@ const CourseCard = ({ course, loading }) => {
   async function handleDelete() {
     const confirmDelete = window.confirm("Are you sure you want to delete this course?");
     if (!confirmDelete) return;
-
     try {
       await axios.delete(`${baseURL}/courses/delete/${course._id}`);
       alert("Course deleted successfully!");
-      window.location.reload(); // Refresh page to reflect deletion
+      window.location.reload();
     } catch (err) {
       console.error("Error deleting course:", err);
       alert("Failed to delete course");
@@ -24,7 +23,7 @@ const CourseCard = ({ course, loading }) => {
   return (
     <div className="flex flex-col border border-gray-400 bg-transparent rounded-3xl w-[350px] hover:-translate-y-4 hover:shadow-lg hover:shadow-black transition-all duration-200">
       {/* Course Image */}
-      <div className="border-b">
+      <div className="border-b ">
         {loading ? (
           <Skeleton height={200} className="rounded-t-3xl" />
         ) : course?.image ? (
@@ -61,7 +60,7 @@ const CourseCard = ({ course, loading }) => {
               </button>
               <button
                 className="px-7 bg-blue-400 py-2 rounded-2xl hover:shadow-lg hover:border-green-900 border-2 transition-all duration-200 border-transparent"
-                onClick={() => navigate(`/admin/course/${encodeURIComponent(course?.title)}`)}
+                onClick={() => navigate(`/admin/courses/${encodeURIComponent(course?.title)}`)}
               >
                 View
               </button>

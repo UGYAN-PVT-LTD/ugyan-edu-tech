@@ -26,11 +26,11 @@ const ViewCourse = () => {
       });
   }, [title]);
 
-  if (error) return <div className="flex min-h-screen w-full justify-start pt-15 ml-28 text-3xl font-bold text-red-500">{error}</div>;
+  if (error) return <div className="flex min-h-screen w-full pl-[23%] justify-start pt-15 ml-28 text-3xl font-bold text-red-500">{error}</div>;
 
   if (loading || !course) {
     return (
-      <div className="flex flex-col w-full justify-center items-start p-10 pt-20 lg:p-20 gap-10 lg:gap-16">
+      <div className="flex flex-col w-full pl-[23%] justify-center items-start pt-20 p-10 gap-10 lg:gap-16">
         <Skeleton height={40} width={300} />
         <Skeleton count={2} />
         <div className="flex gap-10 flex-col lg:flex-row w-full">
@@ -53,7 +53,7 @@ const ViewCourse = () => {
   } = course;
 
   return (
-    <div className="flex flex-col w-full justify-center items-start p-10 pt-20 lg:p-20 gap-10 lg:gap-16">
+    <div className="flex flex-col w-full pl-[23%] justify-center items-start pt-10 p-10 gap-10 lg:gap-16 bg-blue-50">
       {/* Header */}
       <div className="flex flex-col gap-3">
         <span className="text-xl lg:text-4xl font-bold underline text-violet-900">
@@ -67,16 +67,16 @@ const ViewCourse = () => {
         <img
           src={image}
           alt="Course Image"
-          className="lg:w-[40%] w-full md:w-[80%] rounded-2xl shadow-md shadow-blue-700 cursor-pointer"
+          className="lg:w-[40%] w-full md:w-[80%] rounded-2xl shadow-md  cursor-pointer"
         />
-        <div className="flex justify-center items-center shadow-md shadow-blue-700 md:w-[80%] p-5 rounded-2xl cursor-pointer hover:-translate-y-3 transition-all duration-200">
+        <div className="flex justify-center bg-white items-center shadow-lg md:w-[80%] p-5 rounded-2xl cursor-pointer hover:-translate-y-3 transition-all duration-200">
           {description}
         </div>
       </div>
 
       {/* Lessons and Duration */}
       <div className="flex gap-20 lg:text-lg flex-col lg:flex-row md:items-center md:justify-center w-full">
-        <div className="flex flex-col md:w-[80%] shadow-md gap-4 rounded-2xl shadow-blue-700 p-5 lg:p-10 hover:-translate-y-3 duration-200">
+        <div className="flex flex-col md:w-[80%] shadow-lg gap-4 bg-white rounded-2xl p-5 lg:p-10 hover:-translate-y-3 duration-200">
           <span className="text-xl lg:text-2xl text-indigo-700 font-semibold underline">
             ✔ Lessons
           </span>
@@ -97,7 +97,7 @@ const ViewCourse = () => {
         </div>
 
         {/* Extras and Careers */}
-        <div className="flex flex-col md:w-[80%] shadow-md gap-4 rounded-2xl shadow-blue-700 p-5 lg:p-10 hover:-translate-y-3 duration-200">
+        <div className="flex flex-col md:w-[80%] shadow-lg gap-4 rounded-2xl bg-white p-5 lg:p-10 hover:-translate-y-3 duration-200">
           <div className="flex flex-col gap-5">
             <span className="text-indigo-700 text-xl lg:text-2xl font-semibold underline">
               ✔ Student Benefits

@@ -30,6 +30,7 @@ import {
   refundContent
 } from "./components/PolicyTexts";
 import WorkshopForm from "./pages/Workshop";
+import Loading from "./components/Loading";
 
 // Protected Route Component
 const ProtectedRoute = ({ user, allowedRoles, children }) => {
@@ -51,7 +52,7 @@ function App() {
     setLoadingUser(false);
   }, []);
 
-  if (loadingUser) return <div className="p-10 text-center">Loading....</div>;
+  if (loadingUser) return <Loading/>;
 
   const isAdmin = user?.role === "Admin";
   const isAuthentication =

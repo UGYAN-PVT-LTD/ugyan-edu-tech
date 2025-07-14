@@ -1,103 +1,101 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import {NavLink} from "react-router-dom";
-import { IoMdMenu } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
 import { SiCoursera } from "react-icons/si";
-import { MdDataUsage,MdDashboardCustomize,MdOutlineAdminPanelSettings,MdOutlineDriveFolderUpload  } from "react-icons/md";
-import { RiAdminLine } from "react-icons/ri";
+import { FaUser } from "react-icons/fa";
+import {
+  MdDataUsage,
+  MdOutlineAdminPanelSettings,
+  MdOutlineDriveFolderUpload,
+  MdMenu,
+  MdClose
+} from "react-icons/md";
+import { useState } from "react";
 
 const SideNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navlist = [
     {
-        "item":"Home",
-        "route":'/admin/home',
-        "icon":<IoHomeOutline/>
-    },
-    { 
-        "item":"Courses",
-        "route":'/admin/courses',
-        "icon":<SiCoursera/>
-    }, 
-    {
-        "item":"Enrolled Students Data",
-        "route":'/admin/enrolledstudentsdata',
-        "icon":<MdDataUsage/>
+      item: "Dashboard",
+      route: "/admin/dashboard",
+      icon: <IoHomeOutline />,
     },
     {
-        "item":"DashBoard",
-        "route":'/admin/dashboard',
-        "icon":<MdDashboardCustomize/>
+      item: "Courses",
+      route: "/admin/courses",
+      icon: <SiCoursera />,
     },
     {
-        "item":"AdminPanel",
-        "route":'/admin/panel',
-        "icon":<MdOutlineAdminPanelSettings/>
+      item: "Upload Course",
+      route: "/admin/uploadCourse",
+      icon: <MdOutlineDriveFolderUpload />,
     },
     {
-      "item":"Upload New Course",
-      "route":"/admin/uploadCourse",
-      "icon":<MdOutlineDriveFolderUpload/>
-
-    }
+      item: "AdminPanel",
+      route: "/admin/panel",
+      icon: <MdOutlineAdminPanelSettings />,
+    },
+    {
+      item: "Enrolled Students",
+      route: "/admin/enrolledstudents",
+      icon: <MdDataUsage />,
+    },
+    {
+      item: "Profile",
+      route: "/admin/profile",
+      icon: <FaUser />,
+    },
   ];
-  const [menuOpen, setMenuOpen] = useState(true);
 
   return (
-    <div className="flex">
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            key="sidebar"
-            initial={{ x: "-100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="flex fixed h-full w-[260px] backdrop-blur-xl bg-sky-700 text-white rounded-r-2xl gap-7 py-7 items-center flex-col shadow-2xl shadow-black z-20"
-          >
-            <div className="welcome-msg relative px-2 flex justify-between items-center w-full">
-              <span className="text-2xl font-semibold pl-5">Welcome Boss</span>
-              <IoMdMenu
-                size={45}
-                className="text-white top-0 right-0 cursor-pointer p-2 hover:bg-black/20 hover:backdrop-blur-sm rounded-lg transition-all duration-175"
-                onClick={() => setMenuOpen(false)}
-              />
-            </div>
+    <>
+      {/* Mobile Hamburger Toggle */}
+      <div className="md:hidden fixed top-4 left-4 z-50">
+        {isOpen?
+        (<button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-3xl text-blue-500 pl-56"
+        >
+          <MdClose />
+        </button>):
+        (<button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-3xl text-blue-500"
+        >
+          <MdMenu /> 
+        </button>)
+        }
+        
+      </div>
 
-            <ul className="flex flex-col items-center w-full">
-              {navlist.map((navitem, index) => (
-                <NavLink
+      {/* Sidebar */}
+      <div
+        className={`${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0 transition-transform duration-300 ease-in-out fixed top-0 left-0 h-full w-[75%] sm:w-[60%] md:w-[20%] bg-white shadow-xl z-40 md:flex flex-col`}
+      >
+        <div className="flex flex-col w-full items-start p-4">
+          <div className="text-xl font-semibold my-3">EduTech Admin</div>
+          <div className="flex flex-col w-full mt-5 gap-0 text-gray-600">
+            {navlist.map((item, index) => (
+              <NavLink
+                to={item.route}
                 key={index}
-                to={navitem.route}
-                onClick={()=>setMenuOpen(false)}
                 className={({ isActive }) =>
-                    `w-full p-2 flex items-center gap-2 text-lg font-semibold rounded transition-all 
-                    ${isActive ? "bg-black/30 border-white" : "hover:bg-black/20 border-transparent"} 
-                    border hover:backdrop-blur-sm`
+                  isActive
+                    ? "flex items-center gap-3 p-2 my-1 bg-blue-100 text-blue-500 rounded-md w-full"
+                    : "flex items-center gap-3 p-2 my-1 hover:bg-gray-200 rounded-md w-full"
                 }
-                >
-                <div>{navitem.icon}</div>
-                <span>{navitem.item}</span>
-                </NavLink>
-
-              ))}
-            </ul>
-
-            <div className="profile p-4 rounded-full hover:bg-black/20 hover:backdrop-blur-sm cursor-pointer transition-all duration-175">
-              <RiAdminLine size={35} />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {!menuOpen && (
-        <IoMdMenu
-          size={45}
-          className="text-black hover:text-white absolute top-4 left-4 cursor-pointer mt-3 p-2 hover:bg-sky-600 hover:backdrop-blur-sm rounded-lg transition-all duration-175 z-10"
-          onClick={() => setMenuOpen(true)}
-        />
-      )}
-    </div>
+                onClick={() => setIsOpen(false)} // Close on mobile click
+              >
+                <span className="text-lg font-semibold">{item.icon}</span>
+                <span className="font-semibold text-sm">{item.item}</span>
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
