@@ -21,7 +21,6 @@ const ProfilePage = ({ setUser }) => {
       if (res.ok) {
         const data = await res.json();
         setUserDetails(data);
-        console.log(userDetails);
         setUser && setUser(data);
       } else {
         navigate("/login");

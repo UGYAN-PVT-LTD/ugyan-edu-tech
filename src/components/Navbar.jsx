@@ -20,12 +20,6 @@ const Navbar = ({ user, setUser }) => {
     };
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setUser && setUser(null);
-    nav("/");
-  };
-
   return (
     <nav
       className={`${
@@ -52,7 +46,7 @@ const Navbar = ({ user, setUser }) => {
         {/* Navigation Links */}
         <div
           className={`nav-links gap-2 items-center md:justify-start lg:flex lg:py-2 lg:justify-center lg:gap-14 text-[1em] ${
-            menuOpen ? "flex flex-col absolute top-[70px] left-0 w-full bg-white p-6 rounded-b-xl z-40" : "hidden"
+            menuOpen ? "flex flex-col absolute top-[70px] left-0 w-full bg-white/100 shadow-lg p-6 rounded-b-xl z-40" : "hidden"
           } lg:static lg:flex-row lg:bg-transparent`}
         >
           <NavLink to="/" className="nav-item hover:scale-105 hover:text-[#6b21a8]" style={{ "--i": 1 }} onClick={() => setMenuOpen(false)}>
@@ -72,9 +66,12 @@ const Navbar = ({ user, setUser }) => {
           </NavLink>
 
           {/* Mobile view user status */}
-          <div className="lg:hidden">
+          <div className="lg:hidden mt-5">
             {user ? (
-              <span className="font-semibold">
+              <span className="font-semibold border rounded-full px-4 py-2 text-violet-800 focus:bg-violet-50" onClick={()=>{
+                nav("/profile");
+                setMenuOpen(false);
+              }}>
                 Welcome {user.firstName}
               </span>
             ) : (

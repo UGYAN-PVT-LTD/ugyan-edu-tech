@@ -1,6 +1,6 @@
 .contact-us-container {
   padding: 60px 20px;
-  background-color: #f9f7fc;
+  background: linear-gradient(to right, #f5e1ff, #ece1f7);
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -34,14 +34,11 @@
 .contact-us-form {
   flex: 1 1 300px;
   max-width: 450px;
-  background-color: white;
+  background-color: white; /* Restored to white */
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-}
-
-.contact-us-info {
-  
+  padding: 30px; /* Added padding for consistency */
   box-sizing: border-box;
 }
 
@@ -130,6 +127,7 @@
   font-weight: bold;
   border: none;
   border-radius: 30px;
+  cursor: pointer;
   opacity: 0.7;
 }
 
@@ -177,7 +175,7 @@
 
 @media (max-width: 576px) {
   .contact-us-container {
-    padding: 20px 10px;
+    padding: 40px 10px;
   }
 
   .contact-us-heading {

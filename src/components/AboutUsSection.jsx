@@ -62,7 +62,7 @@ const AboutUsSection = () => {
 
         {/* Row 2 */}
         <div className="row">
-          <div className="arrow-container">
+          <div className="flex justify-center items-center">
             <div className="text-box shadow-box">
               {loading ? (
                 <div>

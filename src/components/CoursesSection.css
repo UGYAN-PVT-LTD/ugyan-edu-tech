@@ -1,4 +1,5 @@
 .courses-section {
+  width:100%;
   padding: 60px 40px;
   background: linear-gradient(to right, #f9f6fc, #ece1f7);
   text-align: center;

@@ -100,7 +100,7 @@ const SignupPage = () => {
     <>
       <div className="flex w-[100%] min-h-screen">
         <AuthLeft />
-        <div className="w-full lg:w-[50%] flex flex-col items-center gap-4 justify-center">
+        <div className="w-full lg:w-[50%] flex flex-col items-center gap-4 justify-center bg-gradient-to-br from-violet-400 to-white lg:bg-white">
           <div className="font-semibold text-2xl flex items-center justify-center flex-col">
             <p>Join & Connect the Fastest</p>
             <p>Growing Online Community</p>

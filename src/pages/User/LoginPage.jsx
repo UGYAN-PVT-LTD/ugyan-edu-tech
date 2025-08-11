@@ -70,7 +70,7 @@ const LoginPage = ({user,setUser}) => {
     <>
       <div className="flex min-h-screen w-[100%]" style={{ fontFamily: "Poppins" }}>
         <AuthLeft />
-        <div className="lg:w-[50%] w-[100%] flex flex-col items-center gap-10 justify-center">
+        <div className="lg:w-[50%] w-[100%] flex flex-col items-center gap-10 justify-center bg-gradient-to-br from-violet-400 to-white lg:bg-white">
           <div className="font-semibold text-2xl flex items-center justify-center flex-col">
             <p>Welcome back to the</p>
             <p>Ugyan Tech Community</p>
@@ -145,6 +145,7 @@ const LoginPage = ({user,setUser}) => {
               No Account yet?{" "}
               <span className="font-semibold underline text-gray-700 cursor-pointer" onClick={() => {
                   localStorage.removeItem("token");
+                  setUser(null);
                   navigate("/signup");
                 }}>
                 SIGN UP
