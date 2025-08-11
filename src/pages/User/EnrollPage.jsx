@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { FaCreditCard, FaLock, FaCheckCircle, FaShieldAlt, FaMobile, FaQrcode } from "react-icons/fa";
-import "../css/Courses.css";
+import "../../css/Courses.css";
 
 const EnrollPage = ({ user }) => {
   const navigate = useNavigate();

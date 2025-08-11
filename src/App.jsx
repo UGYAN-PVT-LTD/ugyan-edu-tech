@@ -2,16 +2,16 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 // Pages
-import HomePage from "./pages/HomePage";
-import Courses from "./pages/Courses";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
+import HomePage from "./pages/User/HomePage";
+import Courses from "./pages/User/Courses";
+import AboutUs from "./pages/User/AboutUs";
+import ContactUs from "./pages/User/ContactUs";
 
 import ViewMore from "./components/ViewMore";
-import EnrollPage from "./pages/EnrollPage";
-import ProfilePage from "./pages/ProfilePage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignUpPage";
+import EnrollPage from "./pages/User/EnrollPage";
+import ProfilePage from "./pages/User/ProfilePage";
+import LoginPage from "./pages/User/LoginPage";
+import SignupPage from "./pages/User/SignUpPage";
 
 import AdminLandingPage from "./adminbuild/pages/landingpage";
 
@@ -29,7 +29,7 @@ import {
   termsContent,
   refundContent
 } from "./components/PolicyTexts";
-import WorkshopForm from "./pages/Workshop";
+import WorkshopForm from "./pages/User/Workshop";
 import Loading from "./components/Loading";
 
 // Protected Route Component

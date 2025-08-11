@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaUser, FaUniversity, FaPhoneAlt, FaPaperPlane } from "react-icons/fa";
-import WorkshopLottie from "../components/WorkShopLottie";
+import WorkshopLottie from "../../components/WorkShopLottie";
 
 const WorkshopForm = () => {
   const [formData, setFormData] = useState({

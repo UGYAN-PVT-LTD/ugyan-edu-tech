@@ -1,10 +1,10 @@
 import React from "react";
-import "../css/AboutUs.css";
+import "../../css/AboutUs.css";
 import { FaLightbulb, FaCompass } from "react-icons/fa";
-import Carousel from "../components/Carousel";
-import CircularGallery from "../components/CircularGallery.jsx";
+import Carousel from "../../components/Carousel.jsx";
+import CircularGallery from "../../components/CircularGallery.jsx";
 import WhyChooseUs from "./WhyChooseUs.jsx";  
-import AboutUsSection from "../components/AboutUsSection.jsx";
+import AboutUsSection from "../../components/AboutUsSection.jsx";
 
 const AboutUs = () => {
   return (

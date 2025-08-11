@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FaEye,FaEyeSlash } from "react-icons/fa6";
-import AuthLeft from "../components/AuthLeft";
+import AuthLeft from "../../components/AuthLeft";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = ({user,setUser}) => {
     const baseURL=import.meta.env.VITE_BACKEND_URL;
     const navigate=useNavigate();
+    const [loginErr,setLoginErr]=useState('');
     const [passVisible,setPassVisible]=useState(false);
     const [loginInfo,setLoginInfo]=useState({Email:"",Password:""});
     const [loginError,setLoginError]=useState({Email:'',Password:''});
@@ -42,11 +43,11 @@ const LoginPage = ({user,setUser}) => {
                 }
             } 
             else {
-                alert(data.message || "Login failed");
+                setLoginErr(data.error || "Login failed");
             }
         } catch (err) {
             console.error(err);
-            alert("Something went wrong");
+            setLoginErr(data.err||"Something went wrong.Try again after some time.");
         }
         }
 
@@ -69,12 +70,12 @@ const LoginPage = ({user,setUser}) => {
     <>
       <div className="flex min-h-screen w-[100%]" style={{ fontFamily: "Poppins" }}>
         <AuthLeft />
-        <div className="w-[50%] flex flex-col items-center gap-10 justify-center">
+        <div className="lg:w-[50%] w-[100%] flex flex-col items-center gap-10 justify-center">
           <div className="font-semibold text-2xl flex items-center justify-center flex-col">
             <p>Welcome back to the</p>
             <p>Ugyan Tech Community</p>
           </div>
-          <form onSubmit={handleLoginSubmit} className="flex flex-col gap-3 w-[50%]">
+          <form onSubmit={handleLoginSubmit} className="flex flex-col gap-3 lg:w-[50%] w-[80%] md:w-[60%]">
             <div className="flex flex-col">
                 <div className="w-full relative">
                     <input
@@ -96,24 +97,24 @@ const LoginPage = ({user,setUser}) => {
             </div>
             <div className="flex flex-col">
                 <div className="w-full flex relative">
-                <input
-                    type={`${passVisible?"text":"password"}`} 
-                    id="password"
-                    name="password"
-                    required
-                    className="peer w-full border-b p-2 border-gray-400 focus:border-gray-700 cursor-pointer focus:outline-none pt-6 pb-1 bg-transparent"
-                    
-                    onChange={(e)=>setLoginInfo({...loginInfo,Password:e.target.value})}
-                />
-                <label
-                    htmlFor="password"
-                    className="absolute left-0 top-5 text-gray-400 text-sm pointer-events-none transition-all duration-300 peer-valid:-translate-y-4 peer-valid:scale-90 peer-focus:-translate-y-4 peer-focus:scale-90"
-                >
-                    Password
-                </label>
-                <div className="absolute right-0 text-xl h-full px-3 flex justify-end items-end pb-2" onClick={()=>setPassVisible(!passVisible)}>
-                        {passVisible?<FaEyeSlash color="gray" size={15} className="cursor-pointer"/>:<FaEye color="gray" size={15} className="cursor-pointer"/>}
-                    </div>
+                  <input
+                      type={`${passVisible?"text":"password"}`} 
+                      id="password"
+                      name="password"
+                      required
+                      className="peer w-full border-b p-2 border-gray-400 focus:border-gray-700 cursor-pointer focus:outline-none pt-6 pb-1 bg-transparent"
+                      
+                      onChange={(e)=>setLoginInfo({...loginInfo,Password:e.target.value})}
+                  />
+                  <label
+                      htmlFor="password"
+                      className="absolute left-0 top-5 text-gray-400 text-sm pointer-events-none transition-all duration-300 peer-valid:-translate-y-4 peer-valid:scale-90 peer-focus:-translate-y-4 peer-focus:scale-90"
+                  >
+                      Password
+                  </label>
+                  <div className="absolute right-0 text-xl h-full px-3 flex justify-end items-end pb-2" onClick={()=>setPassVisible(!passVisible)}>
+                          {passVisible?<FaEyeSlash color="gray" size={15} className="cursor-pointer"/>:<FaEye color="gray" size={15} className="cursor-pointer"/>}
+                      </div>
                 </div>
                 <div className="text-sm text-red-500">{loginError.Password}</div>
             </div>
@@ -136,10 +137,16 @@ const LoginPage = ({user,setUser}) => {
               </button>
             </div>
           </form>
+          <div className="text-sm text-red-500 opacity-75 font-semibold flex items-start w-[50%]">
+            {loginErr}
+          </div>
           <div className="">
             <span className="text-sm text-gray-400">
               No Account yet?{" "}
-              <span className="font-semibold underline text-gray-700 cursor-pointer">
+              <span className="font-semibold underline text-gray-700 cursor-pointer" onClick={() => {
+                  localStorage.removeItem("token");
+                  navigate("/signup");
+                }}>
                 SIGN UP
               </span>
             </span>

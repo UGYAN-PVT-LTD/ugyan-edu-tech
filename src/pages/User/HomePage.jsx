@@ -1,14 +1,14 @@
 import React from "react";
-import Navbar from '../components/Navbar';
-import Carousel from '../components/Carousel';
-import WhyChooseUsSection from "../components/WhyChooseUsSection";
-import AboutUsSection from '../components/AboutUsSection';
-import CoursesSection from "../components/CoursesSection";
-import ContactUsSection from "../components/ContactUsSection";
-import TrustedBy from "../components/TrustedBy";
-import Footer from '../components/Footer';
-import '../css/HomePage.css'; 
-import HeroSection from '../components/HeroSection';
+import Navbar from '../../components/Navbar';
+import Carousel from '../../components/Carousel';
+import WhyChooseUsSection from "../../components/WhyChooseUsSection";
+import AboutUsSection from '../../components/AboutUsSection';
+import CoursesSection from "../../components/CoursesSection";
+import ContactUsSection from "../../components/ContactUsSection";
+import TrustedBy from "../../components/TrustedBy";
+import Footer from '../../components/Footer';
+import '../../css/HomePage.css'; 
+import HeroSection from '../../components/HeroSection';
 
 const HomePage = () => {
   return (

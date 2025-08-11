@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import "../css/Courses.css";
+import "../../css/Courses.css";
 import { useNavigate } from "react-router-dom";
-import courses from "../data/Courses.js";
+import courses from "../../data/Courses.js";
 
 const Courses = () => {
   const navigate = useNavigate();

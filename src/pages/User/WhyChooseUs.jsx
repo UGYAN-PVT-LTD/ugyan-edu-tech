@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../css/WhyChooseUs.css";
+import "../../css/WhyChooseUs.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 

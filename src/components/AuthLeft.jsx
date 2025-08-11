@@ -1,7 +1,7 @@
 const AuthLeft=()=>{
     return(
         <>
-            <div className="bg-[url(/authLeft.png)] w-[50%] bg-cover bg-no-repeat flex flex-col justify-around py-5 items-center text-white">
+            <div className="bg-[url(/authLeft.png)] w-[50%] bg-cover bg-no-repeat lg:flex flex-col hidden justify-around py-5 items-center text-white">
                 <div className="w-full flex justify-center items-center gap-2">
                     <div className="bg-[url(/commenticon.png)] bg-no-repeat bg-contain flex justify-center items-center h-10 w-10 ">
                             <span className="font-bold">
