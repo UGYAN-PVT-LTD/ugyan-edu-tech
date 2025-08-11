@@ -329,17 +329,17 @@
     padding: 20px 15px;
     gap: 30px;
   }
-  
+
   .pt-30 {
     padding-top: 60px;
     padding-bottom: 35px;
   }
-  
+
   .pt-30 h1 {
     font-weight: 900;
     letter-spacing: -0.02em;
   }
-  
+
   .top-half {
     flex-direction: column;
     padding: 20px 15px;
@@ -375,14 +375,14 @@
 
   .card {
     height: auto;
-    min-height: 160px;
+    min-height: auto;
     max-width: 100%;
   }
-  
+
   .card-front, .card-back {
     padding: 15px;
   }
-  
+
   .card-icon {
     width: 50px;
     height: 50px;
@@ -400,18 +400,18 @@
   .journey-section {
     padding: 30px 20px;
   }
-  
+
   .journey-section h2 {
     font-size: 2.2rem;
     font-weight: 700;
     color: black;
   }
-  
+
   .journey-text {
     font-size: 0.95rem;
     margin-bottom: 30px;
   }
-  
+
   /* Aggressive fix for CircularGallery overflow on small screens */
   .journey-section > div {
     height: 450px !important;
@@ -420,7 +420,7 @@
     overflow: hidden !important;
     position: relative !important;
   }
-  
+
   .journey-section .circular-gallery {
     width: 100% !important;
     height: 100% !important;
@@ -430,7 +430,7 @@
     top: 0 !important;
     left: 0 !important;
   }
-  
+
   .journey-section .circular-gallery canvas {
     width: 100% !important;
     height: 100% !important;
@@ -438,10 +438,10 @@
     object-fit: contain !important;
     display: block !important;
   }
-  
+
   .card {
     height: auto;
-    min-height: 160px;
+    min-height: auto;
     max-width: 100%;
   }
 }
@@ -452,19 +452,19 @@
     padding: 15px 10px;
     gap: 20px;
   }
-  
+
   .pt-30 {
     padding-top: 50px;
     padding-bottom: 30px;
   }
-  
+
   .pt-30 h1 {
     font-size: 1.5rem;
     padding: 0 10px;
     font-weight: 900;
     letter-spacing: -0.02em;
   }
-  
+
   .top-half {
     flex-direction: column;
     padding: 15px 10px;
@@ -500,14 +500,14 @@
 
   .card {
     height: auto;
-    min-height: 140px;
+    min-height: auto;
     max-width: 100%;
   }
-  
+
   .card-front, .card-back {
     padding: 12px;
   }
-  
+
   .card-icon {
     width: 45px;
     height: 45px;
@@ -525,18 +525,18 @@
   .journey-section {
     padding: 25px 15px;
   }
-  
+
   .journey-section h2 {
     font-size: 2rem;
     font-weight: 700;
     color: black;
   }
-  
+
   .journey-text {
     font-size: 0.9rem;
     margin-bottom: 20px;
   }
-  
+
   /* Aggressive fix for CircularGallery overflow on small screens */
   .journey-section > div {
     height: 450px !important;
@@ -545,7 +545,7 @@
     overflow: hidden !important;
     position: relative !important;
   }
-  
+
   .journey-section .circular-gallery {
     width: 100% !important;
     height: 100% !important;
@@ -555,7 +555,7 @@
     top: 0 !important;
     left: 0 !important;
   }
-  
+
   .journey-section .circular-gallery canvas {
     width: 100% !important;
     height: 100% !important;
@@ -563,10 +563,10 @@
     object-fit: contain !important;
     display: block !important;
   }
-  
+
   .card {
     height: auto;
-    min-height: 140px;
+    min-height: auto;
     max-width: 100%;
   }
 }
@@ -577,7 +577,7 @@
     align-items: center !important;
     padding: 20px 15px !important;
   }
-  
+
   .bottom-half {
     gap: 20px !important;
     padding: 20px 15px !important;
@@ -586,10 +586,10 @@
     align-items: center !important;
     justify-content: center !important;
   }
-  
+
   .card {
     height: auto !important;
-    min-height: 350px !important;
+    min-height: auto !important; /* Allow card height to be determined by content */
     max-width: 100% !important;
     border-radius: 20px !important;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important;
@@ -600,8 +600,9 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    margin-bottom: 20px !important; /* Add space between stacked cards */
   }
-  
+
   .card-front, .card-back {
     padding: 35px 25px !important;
     border-radius: 20px !important;
@@ -609,22 +610,22 @@
     align-items: center !important;
     justify-content: center !important;
   }
-  
+
   .card-front {
     background: white !important;
   }
-  
+
   .card-back {
     background: linear-gradient(135deg, #4B0082, #6a1b9a) !important;
   }
-  
+
   .card-icon {
     width: 90px !important;
     height: 90px !important;
     margin-bottom: 25px !important;
     box-shadow: 0 6px 20px rgba(138, 43, 226, 0.25) !important;
   }
-  
+
   .card-front h3 {
     font-size: 1.7rem !important;
     margin: 0 0 15px 0 !important;
@@ -632,7 +633,7 @@
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   .card-front p {
     font-size: 1.05rem !important;
     color: #666 !important;
@@ -641,7 +642,7 @@
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   .card-back h3 {
     font-size: 1.9rem !important;
     margin: 0 0 18px 0 !important;
@@ -649,7 +650,7 @@
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   .card-back p {
     font-size: 1.05rem !important;
     line-height: 1.6 !important;
@@ -666,7 +667,7 @@
     align-items: center !important;
     padding: 15px 10px !important;
   }
-  
+
   .bottom-half {
     gap: 15px !important;
     padding: 15px 10px !important;
@@ -675,22 +676,8 @@
     align-items: center !important;
     justify-content: center !important;
   }
-  
-  .card {
-    height: auto !important;
-    min-height: 320px !important;
-    max-width: 100% !important;
-    border-radius: 18px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
-    margin: 0 !important;
-    flex: none !important;
-    width: 100% !important;
-    background: white !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  
+
+ 
   .card-front, .card-back {
     padding: 30px 20px !important;
     border-radius: 18px !important;
@@ -698,22 +685,22 @@
     align-items: center !important;
     justify-content: center !important;
   }
-  
+
   .card-front {
     background: white !important;
   }
-  
+
   .card-back {
     background: linear-gradient(135deg, #4B0082, #6a1b9a) !important;
   }
-  
+
   .card-icon {
     width: 80px !important;
     height: 80px !important;
     margin-bottom: 20px !important;
     box-shadow: 0 5px 16px rgba(138, 43, 226, 0.2) !important;
   }
-  
+
   .card-front h3 {
     font-size: 1.6rem !important;
     margin: 0 0 12px 0 !important;
@@ -721,7 +708,7 @@
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   .card-front p {
     font-size: 1rem !important;
     color: #666 !important;
@@ -730,7 +717,7 @@
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   .card-back h3 {
     font-size: 1.8rem !important;
     margin: 0 0 15px 0 !important;
@@ -738,7 +725,7 @@
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   .card-back p {
     font-size: 1rem !important;
     line-height: 1.6 !important;
@@ -754,38 +741,39 @@
   .pt-30 h1 {
     font-size: 1.3rem;
   }
-  
+
   .card-front, .card-back {
     padding: 20px;
   }
-  
+
   .card-icon {
     width: 70px;
     height: 70px;
     margin-bottom: 15px;
   }
-  
+
   .journey-section h2 {
     font-size: 1.4rem;
   }
-  
+
   .journey-text {
     font-size: 0.8rem;
   }
-  
+
   .journey-section > div {
     height: 400px !important;
   }
-  
+
   .journey-section .circular-gallery {
     transform: scale(0.9);
     transform-origin: center center;
   }
-  
+
   .card {
-    min-height: 280px;
+    min-height: auto; /* Changed to auto to prevent overlap */
+    margin-bottom: 15px; /* Added spacing */
   }
-  
+
   .bottom-half {
     gap: 15px;
     padding: 15px 12px;
@@ -798,17 +786,86 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  
+
   .bottom-half {
     margin-top: 20px;
     padding: 20px 15px;
+    flex-direction: row !important; /* Allow cards to be side-by-side in landscape */
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
   }
   
+  .card {
+    min-height: auto !important; /* Adjust to content */
+    margin-bottom: 0 !important; /* Remove bottom margin in landscape view */
+  }
+
   .journey-section > div {
     height: clamp(300px, 40vh, 400px) !important;
   }
 }
 
-.class{
+.class {
   background: linear-gradient(to right, #f5e1ff, #ece1f7);
+}
+
+.split-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* spacing between cards */
+  flex-wrap: wrap; /* allows wrapping if space is tight */
+}
+
+.split-screen .card {
+  flex: 1 1 300px; /* cards shrink/grow but don't go below 300px */
+  max-width: 400px;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .split-screen {
+    flex-direction: column; /* stack vertically on mobile */
+    align-items: center; /* center cards */
+    gap: 1rem; /* vertical space between cards */
+  }
+
+  .split-screen .card {
+    width: 100%;
+    max-width: 90%; /* prevent full edge-to-edge stretch */
+    margin: 0 auto; /* center on small screens */
+  }
+}
+
+/* Optional: card styling if not already present */
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.pt-30 h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.2;
+  color: #333;
+  padding-top: 40px; /* Added padding-top to the heading itself */
+  padding-bottom: 0px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 576px) and (min-width: 481px) {
+  .pt-30 h1 {
+    padding-top: 40px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .pt-30 h1 {
+    padding-top: 40px; 
+    font-weight: bolder;
+  }
 }

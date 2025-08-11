@@ -25,7 +25,7 @@ const WorkshopForm = () => {
   return (
     <div
       className="min-h-screen py-10 px-4 flex justify-center items-center mt-20"
-      style={{ backgroundColor: "#f9f7fc" }}
+      style={{ backgroundImage: 'linear-gradient(to right, #f5e1ff, #ece1f7)' }}
     >
       <div className="w-full max-w-6xl bg-white shadow-lg rounded-xl flex flex-col lg:flex-row overflow-hidden">
         {/* Form Section */}
