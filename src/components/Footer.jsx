@@ -75,7 +75,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Ugyan Tech Solutions. All rights
+          &copy; {new Date().getFullYear()} Ugyan Edutech Pvt Ltd. All rights
           reserved.
         </p>
         <div className="footer-legal-links">
