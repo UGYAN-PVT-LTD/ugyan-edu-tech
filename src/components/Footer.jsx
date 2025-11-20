@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>Email: support@ugyan.in</p>
-          <p>Phone: +91 79751 65470</p>
+          <p>Phone: +91 80886 51951</p>
           <p>Location: Sigma Tech Park, Whitefield Main Rd,</p>  <p>Bengaluru, Karnataka 560066</p>
             <p><a
               href="https://maps.app.goo.gl/rRayKuHqgwM2tw127"
