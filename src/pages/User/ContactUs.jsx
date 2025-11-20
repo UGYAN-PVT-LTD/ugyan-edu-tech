@@ -32,7 +32,7 @@ const ContactUs = () => {
             <>
               <div className="flex flex-col justify-start items-start md:px-20">
                 <p><strong>Email:</strong> support@ugyan.in</p>
-                <p><strong>Phone:</strong> +91 79751 65470</p>
+                <p><strong>Phone:</strong> +91 80886 51951</p>
                 <p><strong>Address:</strong> Sigma Tech Park,
                  Whitefield Main Rd, Bengaluru, Karnataka, 560066</p>
               </div>
